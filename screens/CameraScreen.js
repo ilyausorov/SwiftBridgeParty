@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 const { width, height } = Dimensions.get('window');
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Colors from '../constants/Colors';
 
 import CameraView from './CameraView';
 
@@ -12,7 +14,7 @@ export default function ScreenThree() {
       {imageURL ? (
         <>
           <Image source={{uri: imageURL}} style={{width: width, height: height}} />
-          <View style={{position: 'absolute', top: 20, left: 0, justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{position: 'absolute', top: 0, left: 0, justifyContent: 'center', alignItems: 'center'}}>
             <TouchableOpacity
               style={{
                 justifyContent: 'center',
@@ -25,7 +27,12 @@ export default function ScreenThree() {
                 setImageURL('')
               }}
             >
-              <Text style={{fontSize: 25, color: 'white'}}>x</Text>
+              <AntDesign
+                name={'closecircle'}
+                size={26}
+                style={{ marginBottom: -3 }}
+                color={Colors.tabIconDefault}
+              />
             </TouchableOpacity>
           </View>
         </>

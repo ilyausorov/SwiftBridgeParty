@@ -7,6 +7,11 @@ import GraphScreen from '../screens/GraphScreen';
 import GradientScreen from '../screens/GradientScreen';
 import CameraScreen from '../screens/CameraScreen';
 
+import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
+import Colors from '../constants/Colors';
+
 const GraphScreenStack = createStackNavigator(
   {
     GraphScreen: GraphScreen,
@@ -16,13 +21,12 @@ const GraphScreenStack = createStackNavigator(
 GraphScreenStack.navigationOptions = {
   tabBarLabel: 'Graph',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
+    <Entypo
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'area-graph'}
+      size={26}
+      style={{ marginBottom: -3 }}
+      color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
     />
   ),
 };
@@ -38,7 +42,13 @@ const GradientScreenStack = createStackNavigator(
 GradientScreenStack.navigationOptions = {
   tabBarLabel: 'Gradient',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <MaterialIcons
+      focused={focused}
+      name={'gradient'}
+      size={26}
+      style={{ marginBottom: -3 }}
+      color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+    />
   ),
 };
 
@@ -53,7 +63,13 @@ const CameraScreenStack = createStackNavigator(
 CameraScreenStack.navigationOptions = {
   tabBarLabel: 'Camera',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    <Entypo
+      focused={focused}
+      name={'camera'}
+      size={26}
+      style={{ marginBottom: -3 }}
+      color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+    />
   ),
 };
 

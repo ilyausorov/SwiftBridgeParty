@@ -38,11 +38,6 @@ target 'SwiftBridgeParty' do
   pod 'ScrollableGraphView'
   pod 'GradientView'
 
-  target 'SwiftBridgePartyTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
   use_native_modules!
 end
 
