@@ -36,6 +36,7 @@ target 'SwiftBridgeParty' do
 
   pod 'CameraBackground'
   pod 'ScrollableGraphView'
+  pod 'GradientView'
 
   target 'SwiftBridgePartyTests' do
     inherit! :search_paths

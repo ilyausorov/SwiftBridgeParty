@@ -26,6 +26,7 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - GradientView (2.3.3)
   - MultiToggleButton (1.8.2)
   - RCTRequired (0.61.4)
   - RCTTypeSafety (0.61.4):
@@ -244,6 +245,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GradientView
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -277,6 +279,7 @@ SPEC REPOS:
   trunk:
     - boost-for-react-native
     - CameraBackground
+    - GradientView
     - MultiToggleButton
     - ScrollableGraphView
     - SweeterSwift
@@ -349,6 +352,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 51477b84b1bf7ab6f9ef307c24e3dd675391be44
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
+  GradientView: b044fa46c24062ee245a07a4e8bea4c5c4d63de0
   MultiToggleButton: d02f5deaaa431b83f1f465e95a09e41fb3b40b51
   RCTRequired: f3b3fb6f4723e8e52facb229d0c75fdc76773849
   RCTTypeSafety: 2ec60de6abb1db050b56ecc4b60188026078fd10
@@ -377,6 +381,6 @@ SPEC CHECKSUMS:
   SweeterSwift: 2708d1eea926546f8f6e8fea38ac8f5598ff00c7
   Yoga: ba3d99dbee6c15ea6bbe3783d1f0cb1ffb79af0f
 
-PODFILE CHECKSUM: 3e49a305d3f233af60b8dfd33a3be6635d8f86ba
+PODFILE CHECKSUM: d3abf587f611c0e54b045e61647eaf6b2628a449
 
 COCOAPODS: 1.8.3

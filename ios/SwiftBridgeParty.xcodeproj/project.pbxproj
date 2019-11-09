@@ -18,7 +18,18 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* SwiftBridgePartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SwiftBridgePartyTests.m */; };
-		CB16831923764C100010746D /* NewFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16831823764C100010746D /* NewFile.swift */; };
+		CB1683442376573F0010746D /* UIColor+colorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */; };
+		CB1683452376573F0010746D /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16833F2376573F0010746D /* Examples.swift */; };
+		CB1683462376573F0010746D /* GraphType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1683402376573F0010746D /* GraphType.swift */; };
+		CB1683472376573F0010746D /* RNScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1683412376573F0010746D /* RNScrollableGraphView.swift */; };
+		CB1683482376573F0010746D /* RNScrollableGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1683422376573F0010746D /* RNScrollableGraphView.m */; };
+		CB1683492376573F0010746D /* RNScrollableGraphViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */; };
+		CB16834F237659F60010746D /* RNCameraViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16834C237659F60010746D /* RNCameraViewManager.swift */; };
+		CB168350237659F60010746D /* RNCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16834D237659F60010746D /* RNCameraView.swift */; };
+		CB168351237659F60010746D /* RNCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB16834E237659F60010746D /* RNCameraView.m */; };
+		CB168357237659FD0010746D /* RNGradientViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB168353237659FD0010746D /* RNGradientViewManager.swift */; };
+		CB168358237659FD0010746D /* RNLinearGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = CB168354237659FD0010746D /* RNLinearGradient.m */; };
+		CB168359237659FD0010746D /* RNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB168355237659FD0010746D /* RNGradientView.swift */; };
 		CCB774E702FF711A4604ADEC /* libPods-SwiftBridgeParty-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AE9C22B892F46103C2D3B /* libPods-SwiftBridgeParty-tvOS.a */; };
 		D2EEC97AA5A8E22873FFE4BD /* libPods-SwiftBridgeParty-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F06D1544E1E211945B18ED /* libPods-SwiftBridgeParty-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -60,7 +71,21 @@
 		5CA6018DD36122AFC7EFD8AE /* Pods-SwiftBridgeParty-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgeParty-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SwiftBridgeParty-tvOS/Pods-SwiftBridgeParty-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		C2F06D1544E1E211945B18ED /* libPods-SwiftBridgeParty-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftBridgeParty-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB16831723764C0F0010746D /* SwiftBridgeParty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftBridgeParty-Bridging-Header.h"; sourceTree = "<group>"; };
-		CB16831823764C100010746D /* NewFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFile.swift; sourceTree = "<group>"; };
+		CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+colorFromHex.swift"; sourceTree = "<group>"; };
+		CB16833E2376573F0010746D /* RNScrollableGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNScrollableGraphView.h; sourceTree = "<group>"; };
+		CB16833F2376573F0010746D /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		CB1683402376573F0010746D /* GraphType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphType.swift; sourceTree = "<group>"; };
+		CB1683412376573F0010746D /* RNScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNScrollableGraphView.swift; sourceTree = "<group>"; };
+		CB1683422376573F0010746D /* RNScrollableGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNScrollableGraphView.m; sourceTree = "<group>"; };
+		CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNScrollableGraphViewManager.swift; sourceTree = "<group>"; };
+		CB16834B237659F60010746D /* RNCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCameraView.h; sourceTree = "<group>"; };
+		CB16834C237659F60010746D /* RNCameraViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCameraViewManager.swift; sourceTree = "<group>"; };
+		CB16834D237659F60010746D /* RNCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNCameraView.swift; sourceTree = "<group>"; };
+		CB16834E237659F60010746D /* RNCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCameraView.m; sourceTree = "<group>"; };
+		CB168353237659FD0010746D /* RNGradientViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGradientViewManager.swift; sourceTree = "<group>"; };
+		CB168354237659FD0010746D /* RNLinearGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNLinearGradient.m; sourceTree = "<group>"; };
+		CB168355237659FD0010746D /* RNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNGradientView.swift; sourceTree = "<group>"; };
+		CB168356237659FD0010746D /* RNLinearGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNLinearGradient.h; sourceTree = "<group>"; };
 		D655F5C8CC7724EEE6F36145 /* Pods-SwiftBridgePartyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D97E5A288E23DBD6DEB511AA /* Pods-SwiftBridgeParty-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgeParty-tvOSTests/Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32EFDC2E904DF9820931E6 /* Pods-SwiftBridgePartyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +153,10 @@
 		13B07FAE1A68108700A75B9A /* SwiftBridgeParty */ = {
 			isa = PBXGroup;
 			children = (
+				CB168352237659FD0010746D /* RNGradientView */,
+				CB16834A237659F60010746D /* RNCameraView */,
+				CB16833C2376573F0010746D /* ScrollableGraphView */,
 				CB16831723764C0F0010746D /* SwiftBridgeParty-Bridging-Header.h */,
-				CB16831623764BFD0010746D /* First Test */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -187,12 +214,40 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB16831623764BFD0010746D /* First Test */ = {
+		CB16833C2376573F0010746D /* ScrollableGraphView */ = {
 			isa = PBXGroup;
 			children = (
-				CB16831823764C100010746D /* NewFile.swift */,
+				CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */,
+				CB16833E2376573F0010746D /* RNScrollableGraphView.h */,
+				CB16833F2376573F0010746D /* Examples.swift */,
+				CB1683402376573F0010746D /* GraphType.swift */,
+				CB1683412376573F0010746D /* RNScrollableGraphView.swift */,
+				CB1683422376573F0010746D /* RNScrollableGraphView.m */,
+				CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */,
 			);
-			name = "First Test";
+			path = ScrollableGraphView;
+			sourceTree = "<group>";
+		};
+		CB16834A237659F60010746D /* RNCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				CB16834B237659F60010746D /* RNCameraView.h */,
+				CB16834C237659F60010746D /* RNCameraViewManager.swift */,
+				CB16834D237659F60010746D /* RNCameraView.swift */,
+				CB16834E237659F60010746D /* RNCameraView.m */,
+			);
+			path = RNCameraView;
+			sourceTree = "<group>";
+		};
+		CB168352237659FD0010746D /* RNGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				CB168353237659FD0010746D /* RNGradientViewManager.swift */,
+				CB168354237659FD0010746D /* RNLinearGradient.m */,
+				CB168355237659FD0010746D /* RNGradientView.swift */,
+				CB168356237659FD0010746D /* RNLinearGradient.h */,
+			);
+			path = RNGradientView;
 			sourceTree = "<group>";
 		};
 		D17D2F93E7C9F68FFAB242C9 /* Pods */ = {
@@ -596,9 +651,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB168359237659FD0010746D /* RNGradientView.swift in Sources */,
+				CB16834F237659F60010746D /* RNCameraViewManager.swift in Sources */,
+				CB1683462376573F0010746D /* GraphType.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				CB168351237659F60010746D /* RNCameraView.m in Sources */,
+				CB168358237659FD0010746D /* RNLinearGradient.m in Sources */,
+				CB1683492376573F0010746D /* RNScrollableGraphViewManager.swift in Sources */,
+				CB1683482376573F0010746D /* RNScrollableGraphView.m in Sources */,
+				CB1683442376573F0010746D /* UIColor+colorFromHex.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				CB16831923764C100010746D /* NewFile.swift in Sources */,
+				CB168350237659F60010746D /* RNCameraView.swift in Sources */,
+				CB1683472376573F0010746D /* RNScrollableGraphView.swift in Sources */,
+				CB168357237659FD0010746D /* RNGradientViewManager.swift in Sources */,
+				CB1683452376573F0010746D /* Examples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,17 +3,17 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import ScreenOne from '../screens/ScreenOne';
-import ScreenTwo from '../screens/ScreenTwo';
-import ScreenThree from '../screens/ScreenThree';
+import GraphScreen from '../screens/GraphScreen';
+import GradientScreen from '../screens/GradientScreen';
+import CameraScreen from '../screens/CameraScreen';
 
-const ScreenOneStack = createStackNavigator(
+const GraphScreenStack = createStackNavigator(
   {
-    ScreenOne: ScreenOne,
+    GraphScreen: GraphScreen,
   },
 );
 
-ScreenOneStack.navigationOptions = {
+GraphScreenStack.navigationOptions = {
   tabBarLabel: 'Graph',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -27,42 +27,42 @@ ScreenOneStack.navigationOptions = {
   ),
 };
 
-ScreenOneStack.path = '';
+GraphScreenStack.path = '';
 
-const ScreenTwoStack = createStackNavigator(
+const GradientScreenStack = createStackNavigator(
   {
-    ScreenTwo: ScreenTwo,
+    GradientScreen: GradientScreen,
   }
 );
 
-ScreenTwoStack.navigationOptions = {
+GradientScreenStack.navigationOptions = {
   tabBarLabel: 'Gradient',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
 };
 
-ScreenTwoStack.path = '';
+GradientScreenStack.path = '';
 
-const ScreenThreeStack = createStackNavigator(
+const CameraScreenStack = createStackNavigator(
   {
-    ScreenThree: ScreenThree,
+    CameraScreen: CameraScreen,
   }
 );
 
-ScreenThreeStack.navigationOptions = {
+CameraScreenStack.navigationOptions = {
   tabBarLabel: 'Camera',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   ),
 };
 
-ScreenThreeStack.path = '';
+CameraScreenStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
-  ScreenOneStack,
-  ScreenTwoStack,
-  ScreenThreeStack,
+  GraphScreenStack,
+  GradientScreenStack,
+  CameraScreenStack,
 });
 
 tabNavigator.path = '';
