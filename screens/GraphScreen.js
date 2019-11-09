@@ -6,7 +6,9 @@ import {
   View,
   Dimensions,
   StatusBar,
+  SafeAreaView,
 } from 'react-native';
+import { NavigationEvents } from 'react-navigation';
 
 import RNSGView from './ScrollableGraphView';
 const { width, height } = Dimensions.get('window');
@@ -64,13 +66,27 @@ const graphTypes = [
 
 const ChartSwitcher = ({ setBackgroundColor, setGraphType }) => {
   return (
-    <View style={{borderWidth: 1, borderColor: 'black', zIndex: 1, paddingHorizontal: 5, position: 'absolute', top: 10, left: 30, backgroundColor: 'white'}}>
+    <View style={{
+        position: 'absolute',
+        top: 10,
+        left: 30,
+        borderWidth: 1,
+        borderColor: 'black',
+        backgroundColor: 'white',
+        paddingHorizontal: 5,
+        zIndex: 1,
+    }}>
       {graphTypes.map(type => {
         const { graphType, backgroundColor, id, name } = type;
         return (
           <TouchableOpacity onPress={() => {
               setBackgroundColor(backgroundColor);
               setGraphType(graphType);
+              if(backgroundColor === 'white') {
+                StatusBar.setBarStyle('dark-content');
+              } else {
+                StatusBar.setBarStyle('light-content');
+              }
             }} key={id} style={{paddingVertical: 5}}>
             <Text>{name}</Text>
           </TouchableOpacity>
@@ -94,13 +110,24 @@ export default function ScreenOne() {
   };
 
   return (
-    <View style={{flex: 1, backgroundColor: backgroundColor}}>
-      <ChartSwitcher {...setters} />
-      <RNSGView style={{flex: 1}} graphType={graphType} />
+    <View style={{ flex: 1, backgroundColor: backgroundColor }}>
+      <NavigationEvents
+        onWillFocus={() => {
+          if(backgroundColor === 'white') {
+            StatusBar.setBarStyle('dark-content');
+          } else {
+            StatusBar.setBarStyle('light-content');
+          }
+        }}
+      />
+      <View style={{ marginTop: 40 }}>
+        <ChartSwitcher {...setters} />
+        <RNSGView style={{ height: height - 120}} graphType={graphType} />
+      </View>
     </View>
   );
 }
 
 ScreenOne.navigationOptions = {
-  title: 'Scrollable Graph View'
+  header: null,
 };

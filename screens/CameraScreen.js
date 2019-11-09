@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 const { width, height } = Dimensions.get('window');
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Colors from '../constants/Colors';
+import { NavigationEvents } from 'react-navigation';
 
 import CameraView from './CameraView';
 
 export default function ScreenThree() {
   const [imageURL, setImageURL] = useState('');
 
+  useEffect(() => {
+    StatusBar.setBarStyle('light-content');
+  }, [])
+
   return (
     <View style={styles.container}>
+      <NavigationEvents
+        onWillFocus={() => {
+          StatusBar.setBarStyle('light-content');
+        }}
+      />
       {imageURL ? (
         <>
           <Image source={{uri: imageURL}} style={{width: width, height: height}} />
-          <View style={{position: 'absolute', top: 0, left: 0, justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{position: 'absolute', top: 20, left: 0, justifyContent: 'center', alignItems: 'center'}}>
             <TouchableOpacity
               style={{
                 justifyContent: 'center',
@@ -42,9 +52,9 @@ export default function ScreenThree() {
             ref={e => this.cameraViewRef = e}
             style={{width: width, height: height}}
             buttonMargins={{
-              top: 10,
-              left: 20,
-              right: 20,
+              top: 40,
+              left: 10,
+              right: 10,
               bottom: 10
             }}
           />
@@ -73,7 +83,7 @@ export default function ScreenThree() {
 }
 
 ScreenThree.navigationOptions = {
-  title: 'Camera View',
+  header: null,
 };
 
 const styles = StyleSheet.create({

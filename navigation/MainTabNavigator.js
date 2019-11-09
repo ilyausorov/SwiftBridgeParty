@@ -76,9 +76,14 @@ CameraScreenStack.navigationOptions = {
 CameraScreenStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
-  GraphScreenStack,
   GradientScreenStack,
+  GraphScreenStack,
   CameraScreenStack,
+}, {
+  lazy: false,
+  tabBarOptions: {
+    showLabel: false
+  }
 });
 
 tabNavigator.path = '';
