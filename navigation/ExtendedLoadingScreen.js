@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Image, StatusBar, StyleSheet, Dimensions } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 
-const splashImage = require('../../assets/images/splash.png');
+const splashImage = require('../assets/images/splash.png');
 const { width, height } = Dimensions.get('window');
 
 export default function ExtendedLoadingScreen(props) {

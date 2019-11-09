@@ -20,19 +20,12 @@ class RNGradientView : GradientView {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
-  @objc
-  func constantsToExport() -> [AnyHashable : Any]! {
-    return ["initialCount": 0]
-  }
 
-  @objc(setLocations:)
-  public func setLocations(_ locations: NSArray) {
+  @objc public func setLocations(_ locations: NSArray) {
     self.locations = locations.map({ return $0 as! CGFloat})
   }
   
-  @objc(setColors:)
-  public func setColors(_ colors: NSArray) {
+  @objc public func setColors(_ colors: NSArray) {
     self.colors = colors.map({return RCTConvert.uiColor($0)})
   }
   

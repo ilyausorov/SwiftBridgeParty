@@ -69,7 +69,7 @@ const ChartSwitcher = ({ setBackgroundColor, setGraphType }) => {
     <View style={{
         position: 'absolute',
         top: 10,
-        left: 30,
+        left: 10,
         borderWidth: 1,
         borderColor: 'black',
         backgroundColor: 'white',
@@ -96,7 +96,7 @@ const ChartSwitcher = ({ setBackgroundColor, setGraphType }) => {
   )
 }
 
-export default function ScreenOne() {
+export default function GraphScreen() {
   const [graphType, setGraphType] = useState('createSimpleGraph');
   const [backgroundColor, setBackgroundColor] = useState('white');
 
@@ -128,6 +128,6 @@ export default function ScreenOne() {
   );
 }
 
-ScreenOne.navigationOptions = {
+GraphScreen.navigationOptions = {
   header: null,
 };

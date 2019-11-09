@@ -7,7 +7,7 @@ import { NavigationEvents } from 'react-navigation';
 
 import CameraView from './CameraView';
 
-export default function ScreenThree() {
+export default function CameraScreen() {
   const [imageURL, setImageURL] = useState('');
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function ScreenThree() {
   );
 }
 
-ScreenThree.navigationOptions = {
+CameraScreen.navigationOptions = {
   header: null,
 };
 

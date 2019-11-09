@@ -10,4 +10,6 @@
 
 @interface RNScrollableGraphView : RCTView
 
+@property (nonatomic, assign) NSString *graphType;
+
 @end
