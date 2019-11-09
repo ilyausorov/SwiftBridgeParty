@@ -2,10 +2,9 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
-import TabBarIcon from '../components/TabBarIcon';
-import GraphScreen from '../screens/GraphScreen';
-import GradientScreen from '../screens/GradientScreen';
-import CameraScreen from '../screens/CameraScreen';
+import GraphScreen from '../screens/Graph/GraphScreen';
+import GradientScreen from '../screens/Gradient/GradientScreen';
+import CameraScreen from '../screens/Camera/CameraScreen';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';

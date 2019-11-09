@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
 const { width, height } = Dimensions.get('window');
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Colors from '../constants/Colors';
+import Colors from '../../constants/Colors';
 import { NavigationEvents } from 'react-navigation';
 
 import CameraView from './CameraView';

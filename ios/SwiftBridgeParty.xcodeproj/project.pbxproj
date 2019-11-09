@@ -31,6 +31,7 @@
 		CB16835E2376671C0010746D /* launch_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB16835A2376671B0010746D /* launch_icon.png */; };
 		CB16835F2376671C0010746D /* launch_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = CB16835C2376671B0010746D /* launch_background_image.png */; };
 		CB168362237668790010746D /* launch_background_image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB168360237668790010746D /* launch_background_image_2.png */; };
+		CB1683642376758D0010746D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = CB1683632376758D0010746D /* main.jsbundle */; };
 		CCB774E702FF711A4604ADEC /* libPods-SwiftBridgeParty-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AE9C22B892F46103C2D3B /* libPods-SwiftBridgeParty-tvOS.a */; };
 		D2EEC97AA5A8E22873FFE4BD /* libPods-SwiftBridgeParty-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F06D1544E1E211945B18ED /* libPods-SwiftBridgeParty-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -46,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SwiftBridgePartyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftBridgePartyTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SwiftBridgeParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftBridgeParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +82,7 @@
 		CB16835B2376671B0010746D /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = SwiftBridgeParty/Base.lproj/launch_icon.png; sourceTree = "<group>"; };
 		CB16835D2376671B0010746D /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = SwiftBridgeParty/Base.lproj/launch_background_image.png; sourceTree = "<group>"; };
 		CB168361237668790010746D /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = SwiftBridgeParty/Base.lproj/launch_background_image_2.png; sourceTree = "<group>"; };
+		CB1683632376758D0010746D /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = SwiftBridgeParty/main.jsbundle; sourceTree = "<group>"; };
 		D655F5C8CC7724EEE6F36145 /* Pods-SwiftBridgePartyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D97E5A288E23DBD6DEB511AA /* Pods-SwiftBridgeParty-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgeParty-tvOSTests/Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32EFDC2E904DF9820931E6 /* Pods-SwiftBridgePartyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,9 +146,9 @@
 				CB16834A237659F60010746D /* RNCameraView */,
 				CB16833C2376573F0010746D /* ScrollableGraphView */,
 				CB16831723764C0F0010746D /* SwiftBridgeParty-Bridging-Header.h */,
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				CB1683632376758D0010746D /* main.jsbundle */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -371,6 +372,7 @@
 				CB16835E2376671C0010746D /* launch_icon.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				CB16835F2376671C0010746D /* launch_background_image.png in Resources */,
+				CB1683642376758D0010746D /* main.jsbundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				CB168362237668790010746D /* launch_background_image_2.png in Resources */,
 			);
