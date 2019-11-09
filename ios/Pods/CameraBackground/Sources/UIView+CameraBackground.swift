@@ -11,11 +11,11 @@ import MultiToggleButton
 import SweeterSwift
 import UIKit
 
-public extension UIView {
+open class CameraBackground: UIView {
     // MARK: - Public Camera Interface
 
     /// Change the current camera background layer, e.g. when a user taps a camera on/off button.
-    @objc func toggleCameraBackground(
+    @objc public func toggleCameraBackground(
         _ position: AVCaptureDevice.Position = .unspecified,
         showButtons: Bool = true,
         buttonMargins: UIEdgeInsets = .zero,
@@ -29,13 +29,13 @@ public extension UIView {
     }
 
     /// Remove camera background layer
-    @objc func removeCameraBackground() {
+    @objc public func removeCameraBackground() {
         removeCameraControls()
         cameraLayer?.removeFromSuperlayer()
     }
 
     /// Add camera background layer
-    @objc func addCameraBackground(
+    @objc public func addCameraBackground(
         _ position: AVCaptureDevice.Position = .unspecified,
         showButtons: Bool = true,
         buttonMargins: UIEdgeInsets = .zero,
@@ -59,7 +59,7 @@ public extension UIView {
     /// - Parameters:
     ///   - onTime: action to perform when the timer completes countdown. E.g., make a click sound and/or show a flash.
     ///   - completion: handle captured image.
-    @objc func takeCameraSnapshot(_ onTime: (() -> Void)?, completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> Void)? = nil) {
+    @objc public func takeCameraSnapshot(_ onTime: (() -> Void)?, completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> Void)? = nil) {
         guard let cameraLayer = cameraLayer else { return }
         viewWithTag(theCountdownLabelTag)?.removeFromSuperview()
         performWithTimer(timerInterval) {
@@ -67,20 +67,28 @@ public extension UIView {
             cameraLayer.connection?.isEnabled = false // to freeze image
             cameraLayer.captureStillImage { capturedImage, error in
                 cameraLayer.session?.stopRunning()
-                completion?(capturedImage, error)
+
+                var fixedImage: UIImage
+                if(cameraLayer.session?.inputs.first as? AVCaptureDeviceInput)?.device.position == .front {
+                    fixedImage = UIImage(cgImage: (capturedImage?.cgImage!)!, scale: capturedImage!.scale, orientation: .leftMirrored);
+                } else {
+                    fixedImage = capturedImage!
+                }
+
+                completion?(fixedImage, error)
             }
         }
     }
 
     /// Re-start streaming input from camera into background layer.
-    @objc func freeCameraSnapshot() {
+    @objc public func freeCameraSnapshot() {
         cameraLayer?.connection?.isEnabled = true // to unfreeze image
         cameraLayer?.session?.startRunning()
         removeFocusBox()
     }
 
     /// The background layer showing camera input stream.
-    @objc var cameraLayer: AVCaptureVideoPreviewLayer? {
+    @objc public var cameraLayer: AVCaptureVideoPreviewLayer? {
         return layer.sublayerNamed(theCameraLayerName) as? AVCaptureVideoPreviewLayer
     }
 
@@ -168,7 +176,7 @@ public extension UIView {
 
     // MARK: - Action: Switch Front/Back Camera
 
-    @objc func switchCamera(_: UIButton) {
+    @objc public func switchCamera(_: UIButton) {
         if let session = cameraLayer?.session {
             var cameraPosition = AVCaptureDevice.Position.unspecified
             if let input = session.inputs.first as? AVCaptureDeviceInput {
@@ -183,7 +191,7 @@ public extension UIView {
 
     // MARK: - Action: Toggle Flash Mode
 
-    func setFlashMode(_ rawValue: NSInteger) {
+    public func setFlashMode(_ rawValue: NSInteger) {
         if let device = device {
             if device.hasFlash {
                 if let newMode = AVCaptureDevice.FlashMode(rawValue: rawValue) {
@@ -195,7 +203,7 @@ public extension UIView {
 
     // MARK: - Action: Toggle Timer
 
-    var timerInterval: Int {
+    public var timerInterval: Int {
         if let numberInTitle = (viewWithTag(theTimerButtonTag) as? UIButton)?.currentTitle?.trimmingCharacters(in: CharacterSet(charactersIn: " s")) {
             return Int(numberInTitle) ?? 0
         }
@@ -214,7 +222,7 @@ public extension UIView {
 
     // MARK: - Action: Pinch to Zoom
 
-    @objc func pinchToZoom(_ sender: UIPinchGestureRecognizer) {
+    @objc public func pinchToZoom(_ sender: UIPinchGestureRecognizer) {
         enum Static {
             static var initialZoom: CGFloat = 1
         }
@@ -228,7 +236,7 @@ public extension UIView {
 
     // MARK: - Action: Tap to Focus
 
-    @objc func tapToFocus(_ sender: UITapGestureRecognizer) {
+    @objc public func tapToFocus(_ sender: UITapGestureRecognizer) {
         let focusPoint = sender.location(in: self)
 
         if let device = device {
@@ -251,7 +259,7 @@ public extension UIView {
         cameraLayer?.addSublayer(focusLayer)
     }
 
-    @objc func removeFocusBox() { // not private because it is a selector for AVCaptureDeviceSubjectAreaDidChangeNotification
+    @objc public func removeFocusBox() { // not private because it is a selector for AVCaptureDeviceSubjectAreaDidChangeNotification
         cameraLayer?.sublayerNamed(theFocusLayerName)?.removeFromSuperlayer()
         if let device = device {
             let interestPoint = device.isFocusPointOfInterestSupported ? device.focusPointOfInterest : device.exposurePointOfInterest
@@ -287,9 +295,23 @@ class CameraLayer: AVCaptureVideoPreviewLayer {
         guard let superlayer = superlayer else { return }
         frame = superlayer.bounds
         guard let connection = connection, connection.isVideoOrientationSupported,
-            let appOrientation = AVCaptureVideoOrientation(rawValue: UIApplication.shared.statusBarOrientation.rawValue)
+            let appOrientation = transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.statusBarOrientation.rawValue)!)
         else { return }
+        print(appOrientation)
         connection.videoOrientation = appOrientation
+    }
+
+    private func transformOrientation(orientation: UIInterfaceOrientation) -> AVCaptureVideoOrientation? {
+        switch orientation {
+        case .landscapeLeft:
+            return .landscapeLeft
+        case .landscapeRight:
+            return .landscapeRight
+        case .portraitUpsideDown:
+            return .portraitUpsideDown
+        default:
+            return .portrait
+        }
     }
 }
 
