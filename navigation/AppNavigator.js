@@ -2,7 +2,7 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
-import ExtendedLoadingScreen from '../screens/ExtendedLoading/ExtendedLoadingScreen';
+import ExtendedLoadingScreen from './ExtendedLoadingScreen';
 
 export default createAppContainer(
   createSwitchNavigator({
