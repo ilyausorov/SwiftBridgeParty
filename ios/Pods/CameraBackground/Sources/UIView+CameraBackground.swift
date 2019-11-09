@@ -297,7 +297,6 @@ class CameraLayer: AVCaptureVideoPreviewLayer {
         guard let connection = connection, connection.isVideoOrientationSupported,
             let appOrientation = transformOrientation(orientation: UIInterfaceOrientation(rawValue: UIApplication.shared.statusBarOrientation.rawValue)!)
         else { return }
-        print(appOrientation)
         connection.videoOrientation = appOrientation
     }
 
