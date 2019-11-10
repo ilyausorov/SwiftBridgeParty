@@ -32,6 +32,11 @@
 		CB16835F2376671C0010746D /* launch_background_image.png in Resources */ = {isa = PBXBuildFile; fileRef = CB16835C2376671B0010746D /* launch_background_image.png */; };
 		CB168362237668790010746D /* launch_background_image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB168360237668790010746D /* launch_background_image_2.png */; };
 		CB1683642376758D0010746D /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = CB1683632376758D0010746D /* main.jsbundle */; };
+		CB7D3EC32378874F005723DC /* RNIBAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D3EC22378874F005723DC /* RNIBAView.swift */; };
+		CB7D3EC52378875A005723DC /* RNIBAViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D3EC42378875A005723DC /* RNIBAViewManager.swift */; };
+		CB7D3EC823788797005723DC /* RNIBAView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7D3EC723788797005723DC /* RNIBAView.m */; };
+		CB7D3ED42378C3C2005723DC /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D3ED32378C3C2005723DC /* SampleData.swift */; };
+		CB7D3ED62378C445005723DC /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D3ED52378C445005723DC /* Lorem.swift */; };
 		CCB774E702FF711A4604ADEC /* libPods-SwiftBridgeParty-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 263AE9C22B892F46103C2D3B /* libPods-SwiftBridgeParty-tvOS.a */; };
 		D2EEC97AA5A8E22873FFE4BD /* libPods-SwiftBridgeParty-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F06D1544E1E211945B18ED /* libPods-SwiftBridgeParty-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -83,6 +88,12 @@
 		CB16835D2376671B0010746D /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = SwiftBridgeParty/Base.lproj/launch_background_image.png; sourceTree = "<group>"; };
 		CB168361237668790010746D /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = SwiftBridgeParty/Base.lproj/launch_background_image_2.png; sourceTree = "<group>"; };
 		CB1683632376758D0010746D /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = SwiftBridgeParty/main.jsbundle; sourceTree = "<group>"; };
+		CB7D3EC22378874F005723DC /* RNIBAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNIBAView.swift; sourceTree = "<group>"; };
+		CB7D3EC42378875A005723DC /* RNIBAViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNIBAViewManager.swift; sourceTree = "<group>"; };
+		CB7D3EC623788797005723DC /* RNIBAView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNIBAView.h; sourceTree = "<group>"; };
+		CB7D3EC723788797005723DC /* RNIBAView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNIBAView.m; sourceTree = "<group>"; };
+		CB7D3ED32378C3C2005723DC /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		CB7D3ED52378C445005723DC /* Lorem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		D655F5C8CC7724EEE6F36145 /* Pods-SwiftBridgePartyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D97E5A288E23DBD6DEB511AA /* Pods-SwiftBridgeParty-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftBridgeParty-tvOSTests/Pods-SwiftBridgeParty-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC32EFDC2E904DF9820931E6 /* Pods-SwiftBridgePartyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftBridgePartyTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftBridgePartyTests/Pods-SwiftBridgePartyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +153,7 @@
 		13B07FAE1A68108700A75B9A /* SwiftBridgeParty */ = {
 			isa = PBXGroup;
 			children = (
+				CB7D3EC123788708005723DC /* RNInputBarAccessoryView */,
 				CB168352237659FD0010746D /* RNGradientView */,
 				CB16834A237659F60010746D /* RNCameraView */,
 				CB16833C2376573F0010746D /* ScrollableGraphView */,
@@ -239,6 +251,19 @@
 				CB168356237659FD0010746D /* RNLinearGradient.h */,
 			);
 			path = RNGradientView;
+			sourceTree = "<group>";
+		};
+		CB7D3EC123788708005723DC /* RNInputBarAccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				CB7D3ED52378C445005723DC /* Lorem.swift */,
+				CB7D3ED32378C3C2005723DC /* SampleData.swift */,
+				CB7D3EC22378874F005723DC /* RNIBAView.swift */,
+				CB7D3EC42378875A005723DC /* RNIBAViewManager.swift */,
+				CB7D3EC623788797005723DC /* RNIBAView.h */,
+				CB7D3EC723788797005723DC /* RNIBAView.m */,
+			);
+			path = RNInputBarAccessoryView;
 			sourceTree = "<group>";
 		};
 		D17D2F93E7C9F68FFAB242C9 /* Pods */ = {
@@ -588,17 +613,22 @@
 				CB168359237659FD0010746D /* RNGradientView.swift in Sources */,
 				CB16834F237659F60010746D /* RNCameraViewManager.swift in Sources */,
 				CB1683462376573F0010746D /* GraphType.swift in Sources */,
+				CB7D3EC52378875A005723DC /* RNIBAViewManager.swift in Sources */,
+				CB7D3ED62378C445005723DC /* Lorem.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				CB168351237659F60010746D /* RNCameraView.m in Sources */,
 				CB168358237659FD0010746D /* RNLinearGradient.m in Sources */,
+				CB7D3ED42378C3C2005723DC /* SampleData.swift in Sources */,
 				CB1683492376573F0010746D /* RNScrollableGraphViewManager.swift in Sources */,
 				CB1683482376573F0010746D /* RNScrollableGraphView.m in Sources */,
 				CB1683442376573F0010746D /* UIColor+colorFromHex.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				CB7D3EC823788797005723DC /* RNIBAView.m in Sources */,
 				CB168350237659F60010746D /* RNCameraView.swift in Sources */,
 				CB1683472376573F0010746D /* RNScrollableGraphView.swift in Sources */,
 				CB168357237659FD0010746D /* RNGradientViewManager.swift in Sources */,
 				CB1683452376573F0010746D /* Examples.swift in Sources */,
+				CB7D3EC32378874F005723DC /* RNIBAView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

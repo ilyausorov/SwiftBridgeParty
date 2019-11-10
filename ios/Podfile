@@ -37,6 +37,7 @@ target 'SwiftBridgeParty' do
   pod 'CameraBackground'
   pod 'ScrollableGraphView'
   pod 'GradientView'
+  pod 'InputBarAccessoryView'
 
   use_native_modules!
 end

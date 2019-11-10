@@ -3,3 +3,4 @@
 //
 
 #import "React/RCTUIManager.h"
+#import "React/RCTEventEmitter.h"

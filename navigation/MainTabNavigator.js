@@ -5,6 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import GraphScreen from '../screens/Graph/GraphScreen';
 import GradientScreen from '../screens/Gradient/GradientScreen';
 import CameraScreen from '../screens/Camera/CameraScreen';
+import InputBarScreen from '../screens/InputBarAccessoryView/InputBarScreen';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -74,9 +75,31 @@ CameraScreenStack.navigationOptions = {
 
 CameraScreenStack.path = '';
 
+const InputBarScreenStack = createStackNavigator(
+  {
+    InputBarScreen: InputBarScreen,
+  }
+);
+
+InputBarScreenStack.navigationOptions = {
+  tabBarLabel: 'Input Bar',
+  tabBarIcon: ({ focused }) => (
+    <MaterialIcons
+      focused={focused}
+      name={'text-fields'}
+      size={26}
+      style={{ marginBottom: -3 }}
+      color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+    />
+  ),
+};
+
+InputBarScreenStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
   GradientScreenStack,
   GraphScreenStack,
+  InputBarScreenStack,
   CameraScreenStack,
 }, {
   lazy: false,

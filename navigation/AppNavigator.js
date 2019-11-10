@@ -6,7 +6,7 @@ import ExtendedLoadingScreen from './ExtendedLoadingScreen';
 
 export default createAppContainer(
   createSwitchNavigator({
-    ExtendedLoading: ExtendedLoadingScreen,
+    // ExtendedLoading: ExtendedLoadingScreen,
     Main: MainTabNavigator,
   })
 );
