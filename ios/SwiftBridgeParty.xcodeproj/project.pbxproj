@@ -156,7 +156,7 @@
 				CB7D3EC123788708005723DC /* RNInputBarAccessoryView */,
 				CB168352237659FD0010746D /* RNGradientView */,
 				CB16834A237659F60010746D /* RNCameraView */,
-				CB16833C2376573F0010746D /* ScrollableGraphView */,
+				CB16833C2376573F0010746D /* RNScrollableGraphView */,
 				CB16831723764C0F0010746D /* SwiftBridgeParty-Bridging-Header.h */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -217,7 +217,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CB16833C2376573F0010746D /* ScrollableGraphView */ = {
+		CB16833C2376573F0010746D /* RNScrollableGraphView */ = {
 			isa = PBXGroup;
 			children = (
 				CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */,
@@ -228,7 +228,7 @@
 				CB1683422376573F0010746D /* RNScrollableGraphView.m */,
 				CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */,
 			);
-			path = ScrollableGraphView;
+			path = RNScrollableGraphView;
 			sourceTree = "<group>";
 		};
 		CB16834A237659F60010746D /* RNCameraView */ = {
