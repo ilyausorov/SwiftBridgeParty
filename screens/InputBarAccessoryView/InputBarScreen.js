@@ -1,23 +1,24 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, StyleSheet, Text, StatusBar, TouchableOpacity, KeyboardAvoidingView, Dimensions, FlatList, SafeAreaView, Keyboard } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, KeyboardAvoidingView, Dimensions, FlatList, SafeAreaView, Keyboard } from 'react-native';
 
 import InputBarAccessoryView from './InputBarAccessoryView';
 import { NavigationEvents } from 'react-navigation';
 const { width, height } = Dimensions.get('window');
 import { KeyboardAwareFlatList } from 'react-native-keyboard-aware-scroll-view'
+import moment from 'moment';
 
 const renderComment = ({item, index}) => {
   return (
     <View style={{marginTop: 10, paddingHorizontal: 20}}>
-      <Text>#{index + 1}: {item.comment}</Text>
+      <Text>{moment(item.timestamp).format('MM/D/YY h:mm:ssA')}: {item.comment}</Text>
     </View>
   )
 }
 
 const renderHeader = () => {
   return (
-    <View style={{paddingHorizontal: 20, paddingTop: 20}}>
-      <Text style={{fontSize: 18}}>Comments:</Text>
+    <View style={{paddingHorizontal: 20, paddingTop: 10}}>
+      <Text style={{fontSize: 18}}>Entries</Text>
     </View>
   )
 }
@@ -25,31 +26,19 @@ const renderHeader = () => {
 const renderEmpty = () => {
   return (
     <View style={{marginTop: 10, paddingHorizontal: 20}}>
-      <Text>No comments.</Text>
+      <Text>No entries.</Text>
     </View>
   )
 }
 
 export default function InputBarScreen() {
 
-  useEffect(() => {
-    setTimeout(() => {
-      StatusBar.setBarStyle('dark-content');
-    }, 100)
-  }, [])
-
   let flatListRef = useRef(null);
   const [comments, setComments] = useState([]);
   const [inputHeight, setInputHeight] = useState(50);
   const [keyboardOpen, setKeyboardOpen] = useState(false);
   return (
-    <SafeAreaView style={styles.container}>
-      <NavigationEvents
-        onWillFocus={() => {
-          StatusBar.setBarStyle('dark-content');
-        }}
-      />
-
+    <View style={styles.container}>
       <KeyboardAwareFlatList
         data={comments}
         renderItem={renderComment}
@@ -68,7 +57,7 @@ export default function InputBarScreen() {
         contentContainerStyle={{paddingBottom: keyboardOpen ? 0 : inputHeight + 30}}
       />
 
-      <KeyboardAvoidingView behavior="position" style={{position: 'absolute', bottom: 0}}>
+      <KeyboardAvoidingView keyboardVerticalOffset={88} behavior="position" style={{position: 'absolute', bottom: 0}}>
         <InputBarAccessoryView
           onTextChange={(e) => null}
           onHeightChange={(e) => {
@@ -77,7 +66,7 @@ export default function InputBarScreen() {
           }}
           onSubmit={(e) => {
             const { text } = e.nativeEvent;
-            comments.push({id: (comments.length + 1).toString(), comment: text});
+            comments.push({id: (comments.length + 1).toString(), comment: text, timestamp: moment()});
             const newComments = [];
             comments.map((comment) => newComments.push(comment));
             setComments(newComments);
@@ -89,12 +78,12 @@ export default function InputBarScreen() {
           style={{width: width, height: inputHeight}}
         />
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </View>
   );
 }
 
 InputBarScreen.navigationOptions = {
-  header: null,
+  headerTitle: 'Dear Diary',
 };
 
 const styles = StyleSheet.create({

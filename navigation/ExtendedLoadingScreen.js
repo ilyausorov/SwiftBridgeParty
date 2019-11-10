@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Image, StatusBar, StyleSheet, Dimensions } from 'react-native';
+import { View, Image, StatusBar, StyleSheet, Dimensions, TouchableOpacity, Text } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 
 const splashImage = require('../assets/images/splash_2.png');
@@ -12,14 +12,14 @@ export default function ExtendedLoadingScreen(props) {
     <View style={styles.container}>
       <NavigationEvents
         onWillFocus={() => {
-          StatusBar.setBarStyle('light-content')
-          setTimeout(() => {
-            navigation.navigate('Main');
-          }, 2500)
-
+          StatusBar.setBarStyle('light-content');
         }}
       />
-    <Image style={{flex: 1, width: width, height: height}} resizeMode={'cover'} source={splashImage} />
+      <Image style={{flex: 1, width: width, height: height}} resizeMode={'cover'} source={splashImage} />
+      <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{position: 'absolute', bottom: 50, alignSelf: 'center', width: 240, height: 90, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{color: 'white', fontSize: 28, fontWeight: 'bold'}}>LET'S PARTY</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }

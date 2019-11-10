@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, StatusBar } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
 const { width, height } = Dimensions.get('window');
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Colors from '../../constants/Colors';
@@ -9,18 +9,10 @@ import CameraView from './CameraView';
 
 export default function CameraScreen() {
   const [imageURL, setImageURL] = useState('');
-
-  useEffect(() => {
-    StatusBar.setBarStyle('light-content');
-  }, [])
+  let cameraViewRef = useRef(null);
 
   return (
     <View style={styles.container}>
-      <NavigationEvents
-        onWillFocus={() => {
-          StatusBar.setBarStyle('light-content');
-        }}
-      />
       {imageURL ? (
         <>
           <Image source={{uri: imageURL}} style={{width: width, height: height}} />
@@ -49,14 +41,9 @@ export default function CameraScreen() {
       ) : (
         <>
           <CameraView
-            ref={e => this.cameraViewRef = e}
+            ref={e => cameraViewRef = e}
             style={{width: width, height: height}}
-            buttonMargins={{
-              top: 40,
-              left: 10,
-              right: 10,
-              bottom: 10
-            }}
+            buttonMargins={{top: 20, left: 10, right: 10, bottom: 10}}
           />
 
         <View style={{position: 'absolute', bottom: 20, justifyContent: 'center', alignItems: 'center', left: 0, right: 0}}>
@@ -71,7 +58,7 @@ export default function CameraScreen() {
                 borderColor: 'white',
               }}
               onPress={() => {
-                this.cameraViewRef.takeCameraSnapshot()
+                this.cameraViewRef.current.takeCameraSnapshot()
                   .then(result => setImageURL(result))
               }}
             / >
@@ -83,7 +70,7 @@ export default function CameraScreen() {
 }
 
 CameraScreen.navigationOptions = {
-  header: null,
+  headerTitle: 'Selfie Time',
 };
 
 const styles = StyleSheet.create({

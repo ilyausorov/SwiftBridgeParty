@@ -5,7 +5,6 @@ import {
   TouchableOpacity,
   View,
   Dimensions,
-  StatusBar,
   SafeAreaView,
 } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
@@ -82,11 +81,6 @@ const ChartSwitcher = ({ setBackgroundColor, setGraphType }) => {
           <TouchableOpacity onPress={() => {
               setBackgroundColor(backgroundColor);
               setGraphType(graphType);
-              if(backgroundColor === 'white') {
-                StatusBar.setBarStyle('dark-content');
-              } else {
-                StatusBar.setBarStyle('light-content');
-              }
             }} key={id} style={{paddingVertical: 5}}>
             <Text>{name}</Text>
           </TouchableOpacity>
@@ -100,10 +94,6 @@ export default function GraphScreen() {
   const [graphType, setGraphType] = useState('createSimpleGraph');
   const [backgroundColor, setBackgroundColor] = useState('white');
 
-  useEffect(() => {
-    StatusBar.setBarStyle('dark-content');
-  }, [])
-
   const setters = {
     setGraphType,
     setBackgroundColor
@@ -111,23 +101,14 @@ export default function GraphScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: backgroundColor }}>
-      <NavigationEvents
-        onWillFocus={() => {
-          if(backgroundColor === 'white') {
-            StatusBar.setBarStyle('dark-content');
-          } else {
-            StatusBar.setBarStyle('light-content');
-          }
-        }}
-      />
-      <View style={{ marginTop: 40 }}>
+      <View>
         <ChartSwitcher {...setters} />
-        <RNSGView style={{ height: height - 120}} graphType={graphType} />
+        <RNSGView style={{ height: height - 170, width: width}} graphType={graphType} />
       </View>
     </View>
   );
 }
 
 GraphScreen.navigationOptions = {
-  header: null,
+  headerTitle: 'Trippy',
 };
