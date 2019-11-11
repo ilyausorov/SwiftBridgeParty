@@ -70,7 +70,6 @@ export default function InputBarScreen() {
             const newComments = [];
             comments.map((comment) => newComments.push(comment));
             setComments(newComments);
-
             setTimeout(() => {
               flatListRef.current && flatListRef.current.props.scrollToEnd(true)
             }, 150);

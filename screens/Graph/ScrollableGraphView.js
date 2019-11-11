@@ -21,7 +21,6 @@ class RNSGView extends React.Component {
 
   render() {
     const props = this.props;
-
     return <RNSGViewSwift ref={e => this.viewRef = e}  {...props} />;
   }
 }
