@@ -8,7 +8,10 @@
 
 #import <React/RCTUIManager.h>
 
-@interface RCT_EXTERN_MODULE(RNCameraViewSwift, RCTViewManager)
+@interface
+
+RCT_EXTERN_MODULE(RNCameraViewSwift, RCTViewManager)
+
 RCT_EXTERN_METHOD(
   toggleCameraFromManager:(nonnull NSNumber *)node
   buttonMargins:(NSDictionary *)buttonMargins

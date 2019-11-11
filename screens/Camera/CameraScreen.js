@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, Alert } from 'react-native';
 const { width, height } = Dimensions.get('window');
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Colors from '../../constants/Colors';
 import { NavigationEvents } from 'react-navigation';
+import CameraRoll from "@react-native-community/cameraroll";
 
 import CameraView from './CameraView';
 
@@ -16,7 +17,7 @@ export default function CameraScreen() {
       {imageURL ? (
         <React.Fragment>
           <Image source={{uri: imageURL}} style={{width: width, height: height}} />
-          <View style={{position: 'absolute', top: 20, left: 0, justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{position: 'absolute', top: 0, left: 0, justifyContent: 'center', alignItems: 'center'}}>
             <TouchableOpacity
               style={{
                 justifyContent: 'center',
@@ -35,6 +36,26 @@ export default function CameraScreen() {
               />
             </TouchableOpacity>
           </View>
+          <View style={{position: 'absolute', bottom: 20, justifyContent: 'center', alignItems: 'center', left: 0, right: 0}}>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: 'black',
+                  height: 60,
+                  width: 150,
+                  borderRadius: 6,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                onPress={async() => {
+                  let savedURI = await CameraRoll.saveToCameraRoll(imageURL)
+                  if(savedURI) {
+                    Alert.alert('Saved!')
+                  }
+                }}
+              >
+                <Text style={{color: 'white', fontSize: 24}}>Save</Text>
+              </TouchableOpacity>
+            </View>
         </React.Fragment>
       ) : (
         <React.Fragment>

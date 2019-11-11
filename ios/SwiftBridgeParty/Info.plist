@@ -71,6 +71,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SwiftBridgeParty wants you to take the party home ... to your photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>SwiftBridgeParty wants you to take the party home ... to your photo library</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
