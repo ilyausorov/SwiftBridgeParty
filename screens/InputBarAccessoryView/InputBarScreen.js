@@ -44,7 +44,7 @@ export default function InputBarScreen() {
         ListHeaderComponent={renderHeader}
         ListEmptyComponent={renderEmpty}
         keyExtractor={item => item.id}
-        keyboardDismissMode="none"
+        keyboardDismissMode="on-drag"
         onKeyboardWillShow={() => {
           flatListRef.current && flatListRef.current.props.scrollToEnd(true);
           setKeyboardOpen(true);
