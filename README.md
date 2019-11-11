@@ -20,7 +20,7 @@ To run the app:
 3. cd into the ios directory, rm -rf Pods, rm Podfile.lock and then run pod install (requires CocoaPods; this is on purpose)
 4. cd back to the main directory, and do git reset --hard (will bring back some fixes to the native code that will allow the app to compile properly)
 5. run chmod u+x on buildProd.sh and then run ./buildProd.sh (incase you don't want to run my script, feel free to look inside buildProd.sh and then execute that command). This builds the main.jsbundle file.
-3. turn on Metro bundler with npm/yarn start
-4. open up XCode and Run the app from there either onto a simulator or your device.
+6. turn on Metro bundler with npm/yarn start
+7. open up XCode and Run the app from there either onto a simulator or your device.
 
 ###### P.S. Please don't sue me.
