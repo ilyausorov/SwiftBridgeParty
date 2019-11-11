@@ -60,3 +60,4 @@ buck-out/
 !/ios/Pods/ScrollableGraphView
 !/ios/Pods/CameraBackground
 /android/
+*.sketch
