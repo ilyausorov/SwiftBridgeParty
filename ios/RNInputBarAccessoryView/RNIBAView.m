@@ -6,7 +6,6 @@
 //  Copyright © 2019 Facebook. All rights reserved.
 //
 
-#import "RNIBAView.h"
 #import <React/RCTUIManager.h>
 
 @interface RCT_EXTERN_MODULE(RNIBAViewSwift, RCTViewManager)

@@ -6,7 +6,6 @@
 //  Copyright © 2019 Facebook. All rights reserved.
 //
 
-#import "RNLinearGradient.h"
 #import <React/RCTUIManager.h>
 
 @interface RCT_EXTERN_MODULE(RNLinearGradientSwift, RCTViewManager)
