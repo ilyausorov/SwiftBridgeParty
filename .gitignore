@@ -59,5 +59,6 @@ buck-out/
 /ios/Pods/*
 !/ios/Pods/ScrollableGraphView
 !/ios/Pods/CameraBackground
+!/ios/Pods/GradientView
 /android/
 *.sketch
