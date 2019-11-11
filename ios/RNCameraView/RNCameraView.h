@@ -9,5 +9,4 @@
 #import <React/RCTView.h>
 
 @interface RNCameraView : RCTView
-
 @end

@@ -7,12 +7,9 @@
 //
 
 #import "RNCameraView.h"
-#import <React/RCTViewManager.h>
 #import <React/RCTUIManager.h>
-#import "React/RCTBridgeModule.h"
 
 @interface RCT_EXTERN_MODULE(RNCameraViewSwift, RCTViewManager)
-
 RCT_EXTERN_METHOD(
   toggleCameraFromManager:(nonnull NSNumber *)node
   buttonMargins:(NSDictionary *)buttonMargins

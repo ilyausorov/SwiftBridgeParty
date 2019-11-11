@@ -9,7 +9,4 @@
 #import <React/RCTView.h>
 
 @interface RNScrollableGraphView : RCTView
-
-@property (nonatomic, assign) NSString *graphType;
-
 @end

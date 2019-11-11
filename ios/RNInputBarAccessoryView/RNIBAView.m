@@ -7,10 +7,11 @@
 //
 
 #import "RNIBAView.h"
-#import <React/RCTViewManager.h>
+#import <React/RCTUIManager.h>
 
 @interface RCT_EXTERN_MODULE(RNIBAViewSwift, RCTViewManager)
 RCT_EXPORT_VIEW_PROPERTY(onTextChange, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onSubmit, RCTDirectEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(onHeightChange, RCTDirectEventBlock)
+
 @end

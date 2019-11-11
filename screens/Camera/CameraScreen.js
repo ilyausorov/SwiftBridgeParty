@@ -41,7 +41,7 @@ export default function CameraScreen() {
       ) : (
         <>
           <CameraView
-            ref={e => cameraViewRef = e}
+            ref={e => cameraViewRef.current = e}
             style={{width: width, height: height}}
             buttonMargins={{top: 20, left: 10, right: 10, bottom: 10}}
           />
@@ -58,7 +58,7 @@ export default function CameraScreen() {
                 borderColor: 'white',
               }}
               onPress={() => {
-                this.cameraViewRef.current.takeCameraSnapshot()
+                cameraViewRef.current.takeCameraSnapshot()
                   .then(result => setImageURL(result))
               }}
             / >

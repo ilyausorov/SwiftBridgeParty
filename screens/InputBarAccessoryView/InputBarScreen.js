@@ -57,7 +57,7 @@ export default function InputBarScreen() {
         contentContainerStyle={{paddingBottom: keyboardOpen ? 0 : inputHeight + 30}}
       />
 
-      <KeyboardAvoidingView keyboardVerticalOffset={88} behavior="position" style={{position: 'absolute', bottom: 0}}>
+    <KeyboardAvoidingView keyboardVerticalOffset={64} behavior="position" style={{position: 'absolute', bottom: 0}}>
         <InputBarAccessoryView
           onTextChange={(e) => null}
           onHeightChange={(e) => {

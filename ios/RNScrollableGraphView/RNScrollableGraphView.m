@@ -6,14 +6,12 @@
 //  Copyright © 2019 Facebook. All rights reserved.
 //
 
-#import <React/RCTViewManager.h>
+#import <React/RCTUIManager.h>
 
 @interface RCT_EXTERN_MODULE(RNSGViewSwift, RCTViewManager)
-
 RCT_EXTERN_METHOD(
   toggleGraphViewFromManager:(nonnull NSNumber *)node
 )
-
 RCT_EXPORT_VIEW_PROPERTY(graphType, NSString)
 
 @end

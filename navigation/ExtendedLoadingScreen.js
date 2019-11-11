@@ -12,7 +12,7 @@ export default function ExtendedLoadingScreen(props) {
     <View style={styles.container}>
       <NavigationEvents
         onWillFocus={() => {
-          StatusBar.setBarStyle('light-content');
+          StatusBar.setBarStyle('dark-content');
         }}
       />
       <Image style={{flex: 1, width: width, height: height}} resizeMode={'cover'} source={splashImage} />
