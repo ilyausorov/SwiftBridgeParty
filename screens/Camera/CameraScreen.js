@@ -14,7 +14,7 @@ export default function CameraScreen() {
   return (
     <View style={styles.container}>
       {imageURL ? (
-        <>
+        <React.Fragment>
           <Image source={{uri: imageURL}} style={{width: width, height: height}} />
           <View style={{position: 'absolute', top: 20, left: 0, justifyContent: 'center', alignItems: 'center'}}>
             <TouchableOpacity
@@ -25,9 +25,7 @@ export default function CameraScreen() {
                 height: 60,
                 width: 60
               }}
-              onPress={() => {
-                setImageURL('')
-              }}
+              onPress={() => setImageURL('')}
             >
               <AntDesign
                 name={'closecircle'}
@@ -37,9 +35,9 @@ export default function CameraScreen() {
               />
             </TouchableOpacity>
           </View>
-        </>
+        </React.Fragment>
       ) : (
-        <>
+        <React.Fragment>
           <CameraView
             ref={e => cameraViewRef.current = e}
             style={{width: width, height: height}}
@@ -63,7 +61,7 @@ export default function CameraScreen() {
               }}
             / >
           </View>
-        </>
+        </React.Fragment>
       )}
     </View>
   );

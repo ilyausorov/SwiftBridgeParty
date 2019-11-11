@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent, UIManager, findNodeHandle, NativeModules } from 'react-native';
-let RNSGViewSwift = requireNativeComponent('RNSGViewSwift');
+const RNSGViewSwift = requireNativeComponent('RNSGViewSwift');
 
 class RNSGView extends React.Component {
-
   componentDidMount() {
     setTimeout(() => {
       this.toggleGraphView();
@@ -20,11 +19,13 @@ class RNSGView extends React.Component {
   }
 
   render() {
-    const props = this.props;
+    const { props } = this;
     return <RNSGViewSwift ref={e => this.viewRef = e}  {...props} />;
   }
 }
 
-RNSGView.propTypes = {};
+RNSGView.propTypes = {
+  graphType: PropTypes.string,
+};
 
 export default RNSGView;

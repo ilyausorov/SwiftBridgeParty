@@ -32,7 +32,6 @@ const renderEmpty = () => {
 }
 
 export default function InputBarScreen() {
-
   let flatListRef = useRef(null);
   const [comments, setComments] = useState([]);
   const [inputHeight, setInputHeight] = useState(50);

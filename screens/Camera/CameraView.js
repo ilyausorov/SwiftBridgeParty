@@ -38,12 +38,13 @@ class CameraView extends React.Component {
   }
 
   render() {
-    let { ...otherProps } = this.props;
-
-    return <RNCameraView ref={e => this.cameraViewRef = e} {...otherProps} />;
+    let { props } = this;
+    return <RNCameraView ref={e => this.cameraViewRef = e} {...props} />;
   }
 }
 
-CameraView.propTypes = {};
+CameraView.propTypes = {
+  buttonMargins: PropTypes.object,
+};
 
 export default CameraView;
