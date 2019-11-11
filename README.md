@@ -1,7 +1,8 @@
 # SwiftBridgeParty
 
 Prepared with ❤️ for the React Native NYC Meetup on Nov 12, 2019. 
-My talk was called **Bridging a Native Module Doesn’t Have To Be Scary: Swift Edition**.
+My talk is called **Bridging a Native Module Doesn’t Have To Be Scary: Swift Edition**.
+You can find the slides at **https://usorov.com/rnnyctalk.pptx** (if it's still up?)
 
 Thanks to [@bpolonia]( https://github.com/bpolonia ) for organizing and [@majorleaguesoccer]( https://github.com/majorleaguesoccer ) for hosting!
 
