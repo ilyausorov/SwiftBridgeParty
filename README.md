@@ -21,7 +21,7 @@ To run the app:
 4. cd back to the main directory, and do git reset --hard (will bring back some fixes to the native code that will allow the app to compile properly)
 5. run ./buildProd.sh (incase you don't want to run my script, feel free to look inside buildProd.sh and then execute that command). This builds the main.jsbundle file.
 6. turn on Metro bundler with npm/yarn start
-7. open up XCode and Run the app from there either onto a simulator or your device.
+7. open up XCode and Run the app (open the .xcworkspace file) from there either onto a simulator or your device. In case the build fails because of an error that has to do with your Podfile being out of sync, go back to the iOS folder, run pod install again, and then try to run the app again.
 8. you will probably need to re-sign the app if you're loading it onto your own device
 
 ###### P.S. Please don't sue me.
