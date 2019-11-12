@@ -11,7 +11,7 @@ This app was bootstrapped via react-native init and uses **react-native 0.61.4**
 The following native repos were used in the creation of this app:
 1. [GradientView]( https://github.com/soffes/GradientView )
 2. [ScrollableGraphView]( https://github.com/philackm/ScrollableGraphView )
-3. [InputBarAccessoryView]( https://github.com/nathantannar4/InputBarAccessoryView )
+3. [InputBarAccessoryView]( https://github.com/nathantannar4/InputBarAccessoryView ) (known issue with input text color becoming white if you have iOS system level dark mode on -- use with dark mode off)
 4. [CameraBackground]( https://github.com/yonat/CameraBackground ) (won't work if running on simulator)
 
 To run the app:
@@ -24,4 +24,4 @@ To run the app:
 7. open up XCode and Run the app (open the .xcworkspace file) from there either onto a simulator or your device. In case the build fails because of an error that has to do with your Podfile being out of sync, go back to the iOS folder, run pod install again, and then try to run the app again.
 8. you will probably need to re-sign the app if you're loading it onto your own device
 
-###### P.S. Please don't sue me.
+###### P.S. Please don't sue me Taylor Swift.
