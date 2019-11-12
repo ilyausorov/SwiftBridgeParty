@@ -149,10 +149,10 @@
 		13B07FAE1A68108700A75B9A /* SwiftBridgeParty */ = {
 			isa = PBXGroup;
 			children = (
-				CB7D3EC123788708005723DC /* RNInputBarAccessoryView */,
 				CB168352237659FD0010746D /* RNGradientView */,
-				CB16834A237659F60010746D /* RNCameraView */,
 				CB16833C2376573F0010746D /* RNScrollableGraphView */,
+				CB7D3EC123788708005723DC /* RNInputBarAccessoryView */,
+				CB16834A237659F60010746D /* RNCameraView */,
 				CB16831723764C0F0010746D /* SwiftBridgeParty-Bridging-Header.h */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -216,13 +216,11 @@
 		CB16833C2376573F0010746D /* RNScrollableGraphView */ = {
 			isa = PBXGroup;
 			children = (
-				CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */,
-				CB16833E2376573F0010746D /* RNScrollableGraphView.h */,
-				CB16833F2376573F0010746D /* Examples.swift */,
-				CB1683402376573F0010746D /* GraphType.swift */,
 				CB1683412376573F0010746D /* RNScrollableGraphView.swift */,
-				CB1683422376573F0010746D /* RNScrollableGraphView.m */,
 				CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */,
+				CB16833E2376573F0010746D /* RNScrollableGraphView.h */,
+				CB1683422376573F0010746D /* RNScrollableGraphView.m */,
+				CBE3244A237B28AF00110D49 /* Additional */,
 			);
 			path = RNScrollableGraphView;
 			sourceTree = "<group>";
@@ -230,9 +228,9 @@
 		CB16834A237659F60010746D /* RNCameraView */ = {
 			isa = PBXGroup;
 			children = (
-				CB16834B237659F60010746D /* RNCameraView.h */,
-				CB16834C237659F60010746D /* RNCameraViewManager.swift */,
 				CB16834D237659F60010746D /* RNCameraView.swift */,
+				CB16834C237659F60010746D /* RNCameraViewManager.swift */,
+				CB16834B237659F60010746D /* RNCameraView.h */,
 				CB16834E237659F60010746D /* RNCameraView.m */,
 			);
 			path = RNCameraView;
@@ -241,10 +239,10 @@
 		CB168352237659FD0010746D /* RNGradientView */ = {
 			isa = PBXGroup;
 			children = (
-				CB168353237659FD0010746D /* RNGradientViewManager.swift */,
-				CB168354237659FD0010746D /* RNLinearGradient.m */,
 				CB168355237659FD0010746D /* RNGradientView.swift */,
+				CB168353237659FD0010746D /* RNGradientViewManager.swift */,
 				CB168356237659FD0010746D /* RNLinearGradient.h */,
+				CB168354237659FD0010746D /* RNLinearGradient.m */,
 			);
 			path = RNGradientView;
 			sourceTree = "<group>";
@@ -258,6 +256,16 @@
 				CB7D3EC723788797005723DC /* RNIBAView.m */,
 			);
 			path = RNInputBarAccessoryView;
+			sourceTree = "<group>";
+		};
+		CBE3244A237B28AF00110D49 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				CB16833D2376573F0010746D /* UIColor+colorFromHex.swift */,
+				CB16833F2376573F0010746D /* Examples.swift */,
+				CB1683402376573F0010746D /* GraphType.swift */,
+			);
+			path = Additional;
 			sourceTree = "<group>";
 		};
 		D17D2F93E7C9F68FFAB242C9 /* Pods */ = {
