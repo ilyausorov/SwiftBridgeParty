@@ -24,4 +24,4 @@ To run the app:
 7. open up XCode and Run the app (open the .xcworkspace file) from there either onto a simulator or your device. In case the build fails because of an error that has to do with your Podfile being out of sync, go back to the iOS folder, run pod install again, and then try to run the app again.
 8. you will probably need to re-sign the app if you're loading it onto your own device
 
-###### P.S. Please don't sue me.
+###### P.S. Please don't sue me Taylor Swift.
