@@ -12,15 +12,19 @@ import ScrollableGraphView
 @objc(RNSGView)
 class RNSGView : UIView {
   
+  override init(frame: CGRect) {
+    super.init(frame: frame);
+    self.frame = frame;
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   @objc var graphType: NSString = "createMultiPlotGraphOne" {
       didSet {
           toggleGraphView()
       }
-  }
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame);
-    self.frame = frame;
   }
   
   @objc func toggleGraphView() {
@@ -57,10 +61,6 @@ class RNSGView : UIView {
     }
     
     self.addSubview(graphView)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
   
 }

@@ -28,9 +28,9 @@ class CameraView extends React.Component {
   }
 
   takeCameraSnapshot = async () => {
-    const handle = findNodeHandle(this.cameraViewRef);
+    const node = findNodeHandle(this.cameraViewRef);
     try {
-      const res = await NativeModules.RNCameraViewSwift.takeCameraSnapshotFromManager(handle);
+      const res = await NativeModules.RNCameraViewSwift.takeCameraSnapshotFromManager(node);
       return res;
     } catch(e) {
       return e;

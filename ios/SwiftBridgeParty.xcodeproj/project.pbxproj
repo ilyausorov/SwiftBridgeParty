@@ -218,8 +218,8 @@
 			children = (
 				CB1683412376573F0010746D /* RNScrollableGraphView.swift */,
 				CB1683432376573F0010746D /* RNScrollableGraphViewManager.swift */,
-				CB16833E2376573F0010746D /* RNScrollableGraphView.h */,
 				CB1683422376573F0010746D /* RNScrollableGraphView.m */,
+				CB16833E2376573F0010746D /* RNScrollableGraphView.h */,
 				CBE3244A237B28AF00110D49 /* Additional */,
 			);
 			path = RNScrollableGraphView;
@@ -230,8 +230,8 @@
 			children = (
 				CB16834D237659F60010746D /* RNCameraView.swift */,
 				CB16834C237659F60010746D /* RNCameraViewManager.swift */,
-				CB16834B237659F60010746D /* RNCameraView.h */,
 				CB16834E237659F60010746D /* RNCameraView.m */,
+				CB16834B237659F60010746D /* RNCameraView.h */,
 			);
 			path = RNCameraView;
 			sourceTree = "<group>";
@@ -241,8 +241,8 @@
 			children = (
 				CB168355237659FD0010746D /* RNGradientView.swift */,
 				CB168353237659FD0010746D /* RNGradientViewManager.swift */,
-				CB168356237659FD0010746D /* RNLinearGradient.h */,
 				CB168354237659FD0010746D /* RNLinearGradient.m */,
+				CB168356237659FD0010746D /* RNLinearGradient.h */,
 			);
 			path = RNGradientView;
 			sourceTree = "<group>";
@@ -252,8 +252,8 @@
 			children = (
 				CB7D3EC22378874F005723DC /* RNIBAView.swift */,
 				CB7D3EC42378875A005723DC /* RNIBAViewManager.swift */,
-				CB7D3EC623788797005723DC /* RNIBAView.h */,
 				CB7D3EC723788797005723DC /* RNIBAView.m */,
+				CB7D3EC623788797005723DC /* RNIBAView.h */,
 			);
 			path = RNInputBarAccessoryView;
 			sourceTree = "<group>";

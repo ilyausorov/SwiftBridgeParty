@@ -22,11 +22,11 @@ class RNGradientView : GradientView {
   }
 
   @objc public func setLocations(_ locations: NSArray) {
-    self.locations = locations.map({ return $0 as! CGFloat})
+    self.locations = locations.map({ return $0 as! CGFloat })
   }
   
   @objc public func setColors(_ colors: NSArray) {
-    self.colors = colors.map({return RCTConvert.uiColor($0)})
+    self.colors = colors.map({ return RCTConvert.uiColor($0) })
   }
   
 }

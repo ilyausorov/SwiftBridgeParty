@@ -15,7 +15,6 @@ class RNIBAView : InputBarAccessoryView {
   override init(frame: CGRect) {
     super.init(frame: frame);
     self.frame = frame;
-    self.delegate = self;
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -29,8 +28,8 @@ class RNIBAView : InputBarAccessoryView {
 
 extension RNIBAView: InputBarAccessoryViewDelegate {
   func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+    onSubmit!(["text": text])
     self.inputTextView.text = String()
-    self.onSubmit!(["text": text])
   }
   
   func inputBar(_ inputBar: InputBarAccessoryView, textViewTextDidChangeTo text: String) {

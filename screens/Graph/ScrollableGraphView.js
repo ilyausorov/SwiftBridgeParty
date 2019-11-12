@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent, UIManager, findNodeHandle, NativeModules } from 'react-native';
-const RNSGViewSwift = requireNativeComponent('RNSGViewSwift');
+const RNSGViewSwift = requireNativeComponent('RNSGViewSwift', RNSGView);
 
 class RNSGView extends React.Component {
   componentDidMount() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent, UIManager, findNodeHandle, NativeModules } from 'react-native';
-const RNIBAViewSwift = requireNativeComponent('RNIBAViewSwift');
+const RNIBAViewSwift = requireNativeComponent('RNIBAViewSwift', RNInputBarAccessoryView);
 
 class RNInputBarAccessoryView extends React.Component {
   render() {

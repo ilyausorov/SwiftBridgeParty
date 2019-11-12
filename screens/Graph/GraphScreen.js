@@ -103,7 +103,7 @@ export default function GraphScreen() {
     <View style={{ flex: 1, backgroundColor: backgroundColor }}>
       <View>
         <ChartSwitcher {...setters} />
-        <RNSGView style={{ height: height - 110, width: width}} graphType={graphType} />
+        <RNSGView style={{ height: height - 110, width: width }} graphType={graphType} />
       </View>
     </View>
   );

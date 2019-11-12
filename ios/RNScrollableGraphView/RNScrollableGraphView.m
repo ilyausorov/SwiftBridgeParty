@@ -12,10 +12,10 @@
 
 RCT_EXTERN_MODULE(RNSGViewSwift, RCTViewManager)
 
+RCT_EXPORT_VIEW_PROPERTY(graphType, NSString)
+
 RCT_EXTERN_METHOD(
   toggleGraphViewFromManager:(nonnull NSNumber *)node
 )
-
-RCT_EXPORT_VIEW_PROPERTY(graphType, NSString)
 
 @end
