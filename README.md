@@ -15,6 +15,7 @@ The following native repos were used in the creation of this app:
 4. [CameraBackground]( https://github.com/yonat/CameraBackground ) (won't work if running on simulator)
 
 To run the app:
+
 You need: XCode (preferably 11), CocoaPods, npm / yarn
 
 1. clone the repo to your machine,
