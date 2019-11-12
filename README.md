@@ -14,10 +14,12 @@ The following native repos were used in the creation of this app:
 3. [InputBarAccessoryView]( https://github.com/nathantannar4/InputBarAccessoryView ) (known issue with input text color becoming white if you have iOS system level dark mode on -- use with dark mode off)
 4. [CameraBackground]( https://github.com/yonat/CameraBackground ) (won't work if running on simulator)
 
+You need: 
+1. XCode (preferably 11), 
+2. CocoaPods, 
+3. npm or yarn
+
 To run the app:
-
-You need: XCode (preferably 11), CocoaPods, npm / yarn
-
 1. clone the repo to your machine,
 2. install node_modules
 3. cd into the ios directory, rm -rf Pods, rm Podfile.lock and then run pod install (requires CocoaPods; note: this is on purpose)
