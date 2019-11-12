@@ -11,7 +11,7 @@ This app was bootstrapped via react-native init and uses **react-native 0.61.4**
 The following native repos were used in the creation of this app:
 1. [GradientView]( https://github.com/soffes/GradientView )
 2. [ScrollableGraphView]( https://github.com/philackm/ScrollableGraphView )
-3. [InputBarAccessoryView]( https://github.com/nathantannar4/InputBarAccessoryView )
+3. [InputBarAccessoryView]( https://github.com/nathantannar4/InputBarAccessoryView ) (known issue with input text color becoming white if you have iOS system level dark mode on -- use with dark mode off)
 4. [CameraBackground]( https://github.com/yonat/CameraBackground ) (won't work if running on simulator)
 
 To run the app:
